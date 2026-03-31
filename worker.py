@@ -13,7 +13,7 @@ DBOS_CONFIG: DBOSConfig = {
     "executor_id": str(uuid.uuid4()),
 }
 
-queue = Queue("workflow-queue")
+queue = Queue("workflow-queue", worker_concurrency=5)
 
 
 if __name__ == "__main__":

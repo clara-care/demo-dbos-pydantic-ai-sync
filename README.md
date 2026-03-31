@@ -10,4 +10,5 @@ Demonstrates incompatibilities with the out-of-the-box DBOS and Pydantic AI sync
 ## Usage
 
 - `uv sync` - install the project dependencies
-- `ANTHROPIC_API_KEY=secret uv run worker.py` - start the DBOS worker
+- `OPENAI_API_KEY=secret ANTHROPIC_API_KEY=secret uv run worker.py` - start the DBOS worker
+- `uv run client.py [openai|anthropic|fallback] 10` - enqueue the DBOS work
